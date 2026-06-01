@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>For You, With Love | Aulia Nadita</title>
+
+    <!-- CSS Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Explora&family=Play:wght@400;700&family=Gelasio:wght@400;500;600;700&family=Odibee+Sans&family=Libre+Caslon+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery & Hammer.js -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- BACKGROUND METEORS & STARS -->
+    <div class="stars-bg"></div>
+    <div class="meteors-container"></div>
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="initial-wrapper">
+          <h1 id="initial" class="initial-letter">♡</h1>
+          <div class="comet-container">
+            <div class="comet"></div>
+            <div class="loading-bar-bg">
+              <div id="loading-bar" class="loading-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 1 ==================== -->
+    <div id="page1" class="page hidden">
+      <div class="page-content slide-up-animation">
+        <p
+          class="quote-small gold-text"
+          style="font-family: &quot;Explora&quot;, cursive"
+        >
+          "You're my favorite notification."
+        </p>
+        <h1
+          class="main-title"
+          style="font-family: &quot;Sorts Mill Goudy&quot;, serif"
+        >
+          Something small<br />but full of <span class="love-text">love</span>.
+        </h1>
+        <div class="title-underline">
+          <div class="line-left"></div>
+          <div class="star-center">⭐</div>
+          <div class="line-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <div id="page2" class="page hidden">
+      <div class="page-content">
+        <div class="timer-wrapper">
+          <div class="circular-timer">
+            <svg class="progress-ring" width="180" height="180">
+              <circle
+                class="progress-ring__circle-bg"
+                stroke="#333"
+                stroke-width="4"
+                fill="transparent"
+                r="82"
+                cx="90"
+                cy="90"
+              />
+              <circle
+                id="timer-circle"
+                class="progress-ring__circle"
+                stroke="url(#gradient)"
+                stroke-width="6"
+                fill="transparent"
+                r="82"
+                cx="90"
+                cy="90"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" style="stop-color: #ff6b6b">
+                    <animate
+                      attributeName="stop-color"
+                      values="#ff6b6b;#feca57;#48dbfb;#ff9ff3;#ff6b6b"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </stop>
+                  <stop offset="100%" style="stop-color: #feca57">
+                    <animate
+                      attributeName="stop-color"
+                      values="#feca57;#ff6b6b;#ff9ff3;#48dbfb;#feca57"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            <h2 id="timer-display" class="timer-number">1</h2>
+          </div>
+          <p
+            id="timer-quote"
+            class="timer-quote"
+            style="font-family: &quot;Sorts Mill Goudy&quot;, serif"
+          >
+            preparing for your moment
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 3 ==================== -->
+    <div id="page3" class="page hidden">
+      <div class="page-content">
+        <div class="birthday-card">
+          <span
+            class="birthday-label gold-text"
+            style="font-family: &quot;Play&quot;, sans-serif"
+            >Happy 18th Birthday</span
+          >
+          <h1
+            id="client-name"
+            class="birthday-name"
+            style="font-family: &quot;Gelasio&quot;, serif"
+          >
+            ditaa♡
+          </h1>
+          <div class="name-underline">
+            <div class="name-line-left"></div>
+            <div class="star-gold">✨</div>
+            <div class="name-line-right"></div>
+          </div>
+          <p
+            class="birthday-quote"
+            style="font-family: &quot;Sorts Mill Goudy&quot;, serif"
+          >
+            "This is your special day."
+          </p>
+          <button
+            id="show-photos-btn"
+            class="memories-btn"
+            style="font-family: &quot;Odibee Sans&quot;, cursive"
+          >
+            memories
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 4 ==================== -->
+    <div id="page4" class="page hidden">
+      <div class="slider-overlay">
+        <div class="slider-card">
+          <div class="slider-container" id="slider-container">
+            <div class="image-wrapper">
+              <img id="slide-img" src="" alt="Memory" />
+            </div>
+            <div class="text-wrapper">
+              <p
+                id="slide-text"
+                class="slider-text"
+                style="font-family: &quot;Libre Caslon Display&quot;, serif"
+              ></p>
+            </div>
+            <div class="slider-nav">
+              <button id="prev-slide" class="nav-arrow">←</button>
+              <div class="slide-counter" id="slide-counter">1 / 4</div>
+              <button id="next-slide" class="nav-arrow">→</button>
+            </div>
+            <button
+              id="continue-slide"
+              class="continue-btn hidden"
+              style="font-family: &quot;Odibee Sans&quot;, cursive"
+            >
+              CONTINUE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== ROCKET ANIMATION ==================== -->
+    <div id="rocket-animation" class="rocket hidden">
+      <div class="rocket-body">🚀</div>
+      <div class="rocket-trail"></div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio
+      id="bg-photo-sound"
+      src="assets/backsound.mp3"
+      preload="auto"
+    ></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
