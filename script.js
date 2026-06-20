@@ -4,20 +4,20 @@ $(document).ready(function() {
     // ==================== CONFIGURATION ====================
     const slidesData = [
         { 
-            img: "assets/foto1.jpeg", 
+            img: "https://placehold.co/400", 
             teks: "✨ Di antara semua yang terjadi dalam hidupku, kamu adalah bagian yang ingin selalu aku jaga. Terima kasih sudah ada, dengan caramu yang sederhana tapi sangat berarti. Senyummu adalah alasan aku percaya bahwa cinta sejati itu nyata. 💖"
         },
         { 
-            img: "assets/foto2.jpeg", 
+            img: "https://placehold.co/400", 
             teks: "🌹 Aku tidak tahu kapan jatuh cinta kepadamu. Mungkin saat pertama melihat matamu yang teduh, atau saat pertama tawamu yang tulus. Sejak itu, aku tak bisa membayangkan hariku tanpamu. Kamu membuat dunia yang biasa menjadi luar biasa. Kamu adalah rumah yang aku cari. 🏠"
         },
         { 
-            img: "assets/foto4.jpeg", 
+            img: "https://placehold.co/400", 
             teks: "✨ Jika ditanya hal terbaik dalam hidupku, jawabannya selalu kamu. Bukan tentang tempat atau momen spesial, tapi tentang bagaimana kamu hadir dan membuat segalanya terasa lebih ringan. Bersamamu, aku merasa lebih kuat, lebih utuh, dan lebih berani bermimpi. 💫"
         },
         { 
-            img: "assets/foto3new.jpeg", 
-            teks: "💕 Terima kasih telah menjadi warna di hari-hariku yang kadang kelabu. Terima kasih telah mengajarkanku arti ketulusan. Aku tidak sempurna, tapi akan terus berusaha menjadi pantas untukmu. Kamu bukan hanya cinta dalam hidupku, kamu adalah hidup dalam setiap cinta yang aku miliki. 💝"
+            img: "https://placehold.co/400", 
+            teks: "💕 Terima kasih sudah ada, pacarku yang cantik, untuk semua cinta dan perhatian yang kamu berikan setiap hari. Kamu membuat hidupku lebih cerah hanya dengan ada di dalamnya, dan aku sangat bersyukur atas kehadiranmu. Terima kasih atas kesabaranmu, dukunganmu, dan caramu mengerti aku bahkan saat kata-kata tidak cukup. Aku sangat beruntung bisa memanggilmu bahwa kamu milikku, hari ini dan selamanya. 💝"
         }
     ];
 
